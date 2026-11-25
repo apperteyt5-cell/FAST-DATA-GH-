@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080808">
+  <title>FAST DATA GH | MTN Data Bundles</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="Fast Data GH home">
+      <span class="brand-mark">FD</span>
+      <span>FAST DATA <b>GH</b><small>DATA MADE SIMPLE</small></span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">☰</button>
+    <nav id="mainNav">
+      <a href="#bundles">Buy Data</a>
+      <a href="#track">Track Order</a>
+      <a href="#how">How It Works</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <span class="eyebrow"><span class="live-dot"></span> MTN DATA BUNDLES</span>
+        <h1>Stay connected.<br><span>Spend smarter.</span></h1>
+        <p>Buy your MTN data bundles in a few simple steps. Easy ordering, clear updates and a receipt for every confirmed purchase.</p>
+        <a class="primary-btn" href="#bundles">Choose a bundle <span>→</span></a>
+        <div class="hero-note"><span>✓</span> Simple ordering <span>✓</span> Order tracking</div>
+      </div>
+      <div class="hero-card">
+        <div class="card-top"><span class="signal-icon">▥</span><span class="pill">MTN ONLY</span></div>
+        <p class="card-label">YOUR DATA, YOUR WAY</p>
+        <div class="big-number">FAST<span>.</span></div>
+        <div class="blue-rule"></div>
+        <p class="card-caption">A simpler way to buy data.</p>
+        <div class="mini-stats"><div><b>01</b><small>Choose</small></div><div><b>02</b><small>Pay</small></div><div><b>03</b><small>Track</small></div></div>
+      </div>
+    </section>
+
+    <section class="section bundles-section" id="bundles">
+      <div class="section-heading">
+        <div><span class="eyebrow">SELECT YOUR PACKAGE</span><h2>Choose your bundle</h2></div>
+        <span class="network-tag">● MTN Ghana</span>
+      </div>
+      <div class="bundle-grid" id="bundleGrid">
+        <button class="bundle" data-name="1GB" data-price="5.80"><span class="bundle-size">1GB</span><span class="bundle-price">GH₵ 5.80</span><span class="bundle-action">Select bundle →</span></button>
+        <button class="bundle" data-name="2GB" data-price="11.50"><span class="bundle-size">2GB</span><span class="bundle-price">GH₵ 11.50</span><span class="bundle-action">Select bundle →</span></button>
+        <button class="bundle" data-name="5GB" data-price="28.00"><span class="bundle-size">5GB</span><span class="bundle-price">GH₵ 28.00</span><span class="bundle-action">Select bundle →</span></button>
+      </div>
+      <p class="price-note">Sample prices for the first design. We will connect the live supplier prices before launch.</p>
+
+      <div class="order-panel" id="orderPanel">
+        <div class="order-panel-heading"><div><span class="eyebrow">PLACE AN ORDER</span><h3>Your bundle details</h3></div><span class="step-badge">STEP 1</span></div>
+        <form id="orderForm">
+          <div class="form-grid">
+            <label>Selected bundle<input id="selectedBundle" value="Choose a bundle above" readonly></label>
+            <label>Amount to pay<input id="selectedPrice" value="GH₵ 0.00" readonly></label>
+            <label class="full">MTN phone number<input id="phone" type="tel" inputmode="numeric" placeholder="e.g. 0241234567" maxlength="10" required></label>
+          </div>
+          <button class="primary-btn form-submit" type="submit">Continue to order summary <span>→</span></button>
+          <p class="form-message" id="formMessage" role="status"></p>
+        </form>
+      </div>
+    </section>
+
+    <section class="delivery-section" id="delivery">
+      <div class="delivery-card">
+        <div class="delivery-heading"><span class="eyebrow">● ESTIMATED DELIVERY</span><div class="ghana-clock"><span class="clock-dot"></span><span>GHANA TIME</span><strong id="ghanaTime">--:--:--</strong></div></div>
+        <div class="delivery-alert"><span class="alert-icon">!</span><div><strong>Delivery updates you can follow.</strong><p>Orders may take longer during busy periods. Please allow up to 4+ hours for processing. Your order reference will help you track its progress.</p></div></div>
+        <div class="delivery-lanes">
+          <div class="delivery-lane fast-lane"><span class="lane-icon">⚡</span><div class="lane-copy"><strong>Fast lane</strong><small>When supplier processing is quick</small></div><b>5–30 min</b><span class="lane-status">ESTIMATE</span></div>
+          <div class="delivery-lane standard-lane"><span class="lane-icon">◷</span><div class="lane-copy"><strong>Standard queue</strong><small>During busy periods or delays</small></div><b>4+ hours</b><span class="lane-status">ESTIMATE</span></div>
+        </div>
+        <div class="delivery-foot"><span class="moving-bar"><i></i></span><span>Live clock · Estimates only, not a live supplier status</span></div>
+      </div>
+    </section>
+
+    <section class="section track-section" id="track">
+      <div class="track-copy"><span class="eyebrow">ORDER UPDATES</span><h2>Already ordered?</h2><p>Enter your order reference to check its current status.</p></div>
+      <form class="track-form" id="trackForm"><label for="orderId">Order reference</label><div class="track-input-row"><input id="orderId" placeholder="e.g. FDG-123456" required><button type="submit">Track order</button></div><p id="trackResult" class="form-message" role="status"></p></form>
+    </section>
+
+    <section class="section how-section" id="how">
+      <span class="eyebrow">QUICK & SIMPLE</span><h2>How it works</h2>
+      <div class="steps">
+        <article><span>01</span><h3>Choose a bundle</h3><p>Select the MTN data package you need.</p></article>
+        <article><span>02</span><h3>Enter your number</h3><p>Double-check the number receiving the data.</p></article>
+        <article><span>03</span><h3>Pay and track</h3><p>Complete payment and use your reference for updates.</p></article>
+      </div>
+    </section>
+  </main>
+
+  <footer><a href="admin.html" class="admin-link">Admin dashboard</a><a class="brand footer-brand" href="#"><span class="brand-mark">FD</span><span>FAST DATA <b>GH</b><small>DATA MADE SIMPLE</small></span></a><p>© <span id="year"></span> FAST DATA GH. All rights reserved.</p><small>MTN bundles only. FAST DATA GH is an independent reseller and is not the official MTN website.</small></footer>
+
+  <dialog id="summaryDialog">
+    <div class="dialog-top"><span class="eyebrow">ORDER SUMMARY</span><button id="closeDialog" aria-label="Close">×</button></div>
+    <h2>Check your details</h2>
+    <p class="dialog-intro">Review your order before proceeding.</p>
+    <div class="summary-line"><span>Bundle</span><b id="summaryBundle">—</b></div>
+    <div class="summary-line"><span>Phone number</span><b id="summaryPhone">—</b></div>
+    <div class="summary-line total"><span>Amount</span><b id="summaryPrice">—</b></div>
+    <p class="demo-warning">Demo stage: this page does not collect payment or submit a live data order yet.</p>
+    <button class="primary-btn full-btn" id="confirmDemo">Save demo order reference</button>
+    <p id="demoReceipt" class="form-message" role="status"></p>
+  </dialog>
+</body>
+</html>
