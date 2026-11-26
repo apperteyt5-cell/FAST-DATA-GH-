@@ -22,7 +22,14 @@ const dialog = document.getElementById('summaryDialog');
 const sellingPrices = {
   '1GB': 5.80,
   '2GB': 11.50,
-  '5GB': 28.00
+  '3GB': 15.20,
+  '4GB': 20.10,
+  '5GB': 28.00,
+  '6GB': 29.90,
+  '8GB': 39.70,
+  '10GB': 49.50,
+  '15GB': 74.00,
+  '20GB': 98.50
 };
 
 // Fetch MTN bundles from our backend.
