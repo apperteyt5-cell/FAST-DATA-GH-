@@ -43,8 +43,10 @@ async function loadBundles() {
     }
 
     const mtnBundles = result.bundles.filter(bundle =>
-      String(bundle.network).toUpperCase() === 'MTN'
-    );
+  String(bundle.network).toUpperCase() === 'MTN' &&
+  Number(bundle.size_mb) >= 1000 &&
+  Number(bundle.size_mb) <= 20000
+);
 
     if (!mtnBundles.length) {
       throw new Error('No MTN bundles available.');
